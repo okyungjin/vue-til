@@ -1,9 +1,9 @@
 <template>
-  <div>
-    <router-view />
-  </div>
+  <div>LoginPage</div>
 </template>
 
 <script>
 export default {};
 </script>
+
+<style></style>
