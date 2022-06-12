@@ -1,9 +1,6 @@
 import Vue from 'vue';
 import VueRouter from 'vue-router';
 
-import LoginPage from '@/views/LoginPage.vue';
-import SignUpPage from '@/views/SignUpPage.vue';
-
 Vue.use(VueRouter);
 
 export default new VueRouter({
@@ -11,11 +8,11 @@ export default new VueRouter({
   routes: [
     {
       path: '/login',
-      component: LoginPage,
+      component: () => import('@/views/LoginPage.vue'), // dynamic import
     },
     {
       path: '/sign-up',
-      component: SignUpPage,
+      component: () => import('@/views/SignUpPage.vue'), // dynamic import
     },
   ],
 });
